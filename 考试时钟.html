@@ -1,0 +1,119 @@
+<html>
+<head>
+<style type="text/css">
+.input1{ BACKGROUND-COLOR:#000000; BORDER-BOTTOM:#000000 0px solid; 
+BORDER-LEFT:#000000 0px solid; 
+BORDER-RIGHT: #000000 0px solid; 
+BORDER-TOP: #000000 0px solid; COLOR: rgb(9,9,9); FONT-SIZE: 6
+}
+</style>
+
+<TITLE>期末考试时钟 华南理工大学广州学院-机械工程学院</TITLE> 
+<script language=javaScript>
+<!--// 
+function Fkey(){
+     var WsShell = new ActiveXObject('WScript.Shell')
+     WsShell.SendKeys('{F11}');
+}
+
+function clockon() {
+thistime= new Date()
+var hours=thistime.getHours()
+var minutes=thistime.getMinutes()
+var seconds=thistime.getSeconds()
+if (eval(hours) <10) {hours="0"+hours}
+if (eval(minutes) < 10) {minutes="0"+minutes}
+if (seconds < 10) {seconds="0"+seconds}
+thistime = hours+":"+minutes+":"+seconds
+if(document.all) {
+bgclocknoshade.innerHTML=thistime
+bgclockshade.innerHTML=thistime
+}
+if(document.layers) {
+document.bgclockshade.document.write('<div id="bgclockshade" style="position:absolute;visibility:visible;font-family:Verdana;color:FFAAAAA;font-size:80px;top:10px;left:150px">'+thistime+'</div>')
+document.bgclocknoshade.document.write('<div id="bgclocknoshade" style="position:absolute;visibility:visible;font-family:Verdana;color:DDDDDD;font-size:80px;top:10px;left:150px">'+thistime+'</div>')
+document.close()
+}
+var timer=setTimeout("clockon()",200)
+}
+//-->
+</script>
+<link rel="stylesheet" href="../style.css"><meta http-equiv="Content-Type" content="text/html; charset=gb2312"></head>
+<body bgcolor="#000000" text="#99FF00" onLoad="clockon()">
+<div id="bgclockshade" style="position:absolute;visibility:visible;font-family:Arial;color:FF8888;font-size:150px;top:10px;left:350px"></div>
+<div id="bgclocknoshade" style="position:absolute;visibility:visible;font-family:Arial;color:99FF00;font-size:150px;top:10px;left:350px"></div>
+<div id="mainbody" style="position:absolute; visibility:visible; left:50px; top:153px; width:1200px; height:459px">
+</body>
+<table width="91%">
+
+	<tr>
+		
+		<td width="94%">
+		<p align="center">　
+		<font face="黑体" color="#FFFFFF" size="7">文明考风     诚信应考 </font><tr>
+  <td width="94%" height="60">　
+<font face="黑体" size="6" color="#FFFFFF">1、考试时间：
+<input type="text" value="9:00--11:00" class=input1 name="b1" id="b1" size="15" style="color: #FFFFFF; font-family: 黑体; font-size: 28pt">&nbsp;&nbsp;&nbsp;
+考试方式：<input type="text" value="闭  卷" class=input1 name="b2" id="b2" size="8" style="color: #FFFFFF; font-family: 黑体; font-size: 28pt">&nbsp;
+</font>
+</td>
+</tr>
+    <tr>
+  <td width="94%" height="60">　
+<font face="黑体" size="6" color="#FFFFFF">2、考试科目：<input type="text" value="请录入科目名称" class=input1 name="b3" id="b3" size="41" style="color: #FFFFFF; font-family: 黑体; font-size: 28pt"></font></td>
+</tr>
+  <tr>
+  <td width="94%" height="60">　
+<font face="黑体" size="6" color="#FFFFFF">
+	3、桌面只摆放学生证或者学生卡、必要的文具，按座位表入座。</tr>
+	  <tr>
+  <td width="94%" height="90">　
+<font face="黑体" size="6" color="#FFFFFF">
+		4、</font><font face="黑体" size="6" color="#FF0000">自行将桌面和抽屉清理干净，严禁使用手机等通讯工具，手机<br>&nbsp;&nbsp;&nbsp; &nbsp; 必须关机，并与书包、资料等其它考试无关物品集中放置到讲台前。</tr>
+
+    <tr>
+  <td width="94%" height="60">　
+	<font face="黑体" size="6" color="#FFFFFF">
+	5、考前请上好洗手间，考试中途一般不允许上洗手间。</font></td>
+</tr>
+
+    <tr>
+  <td width="94%" height="45">　
+<font face="黑体" size="6" color="#FFFFFF">6、</textarea>
+	<input type="text" value="其他：考试为开卷的，桌面只留指定的资料，手机与其他物品均放到讲台前。" class=input1 name="b4" id="b4" size="70" style="color: #FFFFFF; font-family: 黑体; font-size: 20pt"></tr>
+
+  <tr>
+  <td width="94%" height="38">
+	<p align="right">屏幕分辨率在1024×768 以上，浏览器使用兼容模式。　
+<font face="黑体" size="2" color="#FFFFFF">
+&nbsp;&nbsp;</font><font size="4" face="黑体" color="#00FF00">按“F11”全屏或</font><font face="黑体" size="2" color="#FFFFFF"><font size="4" face="黑体" color="#FF0000">&nbsp; </font><a href="javascript:Fkey()">
+	<font size="4" face="黑体" color="#FF0000">点这里</font></a><font size="4" face="黑体" color="#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>&nbsp;</tr>
+
+
+
+  <tr>
+  <td width="94%">可录入信息进行修改
+</td>
+</tr>
+		</td>
+	</tr>
+		<tr>
+
+		<td width="94%">考试时间：<input value="9:00--11:00" type="text" name="a1" id="a1"  onkeyup="document.getElementById('b1').value=this.value" onblur="document.getElementById('b1').value=this.value" size="14">&nbsp;&nbsp;&nbsp;&nbsp;
+  考试方式：<input type="text" value="闭  卷" name="a2" id="a2" onkeyup="document.getElementById('b2').value=this.value" onblur="document.getElementById('b2').value=this.value" size="14">&nbsp;&nbsp;&nbsp;&nbsp;
+
+  		考试科目：<input type="text" value="科目名称" name="a3" id="a3" onkeyup="document.getElementById('b3').value=this.value" onblur="document.getElementById('b3').value=this.value" size="34">
+  
+ 		<br>
+ 		其他事项：<input value="其他：考试为开卷的，桌面只留指定的资料，手机与其他物品均放到讲台前。" type="text" name="a4" id="a4"  onkeyup="document.getElementById('b4').value=this.value" onblur="document.getElementById('b4').value=this.value" size="98">&nbsp;&nbsp;&nbsp;&nbsp;
+  
+  <br>
+  
+ </td>
+
+	</tr>
+
+</table>
+
+</html>
+ 
